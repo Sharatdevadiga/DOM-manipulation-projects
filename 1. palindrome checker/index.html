@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Palindrome Checker</title>
+    <link href="styles.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADING -->
+      <header>
+        <h1 class="heading-primary">Palindrome checker</h1>
+      </header>
+      <main class="main-section">
+        <div class="descreption-box">
+          <p class="descreption">
+            💡A palindrome is a word or phrase that can be read the same way
+            forwards and backwards, ignoring punctuation, case, and spacing.
+          </p>
+
+          <ul class="examples-yes">
+            For example :
+            <li>✅ radar</li>
+            <li>✅ A man, a plan, a canal, Panama!</li>
+            <li>✅ 12321</li>
+          </ul>
+
+          <ul class="examples-no">
+            <li>.</li>
+            <li>❌ radars</li>
+            <li>❌ A woman, a plan, a canal, Panama!</li>
+            <li>❌ 12345</li>
+          </ul>
+        </div>
+
+        <!-- CHECKER -->
+        <div class="validator-box">
+          <p class="instruction">Enter the text to check for palindrome</p>
+          <!-- INPUTS -->
+          <div class="input-box">
+            <input id="text-input" type="text" class="text-input" />
+            <button id="check-btn" class="check-btn">Check</button>
+          </div>
+          <!-- OUTPUT -->
+          <div id="result" class="result"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

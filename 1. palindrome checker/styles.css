@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  font-size: 62.75%;
+  --clr1: #003f20;
+  --clr1-tint1: #007e40;
+  --clr1-tint2: #99edc3;
+  --clr2-background: #15000a;
+}
+
+/* ---------------- */
+/* general styles */
+/* ------------------ */
+body {
+  background-color: var(--clr2-background);
+  color: #fff;
+}
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 4.8rem 4.8rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  row-gap: 6.4rem;
+}
+
+.main-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 5.2rem;
+  max-width: 85rem;
+}
+
+.heading-primary {
+  font-size: 4.4rem;
+  font-weight: bold;
+}
+/* ---------------- */
+/* component styles */
+/* ------------------ */
+
+/* descreption box */
+.descreption-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 3.6rem;
+  line-height: 1.5;
+  padding: 2.4rem 4.8rem;
+  border-radius: 11px;
+  background-color: var(--clr1);
+  box-shadow: 0 4px 12px 0 rgba(255, 255, 255, 0.219);
+}
+
+.descreption {
+  font-size: 2rem;
+  grid-column: 1 / -1;
+  font-weight: bold;
+}
+.examples-yes,
+.examples-no {
+  font-size: 1.6rem;
+  list-style: none;
+  line-height: 1.8;
+}
+
+/* validator box */
+.validator-box {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3.6rem;
+  justify-items: center;
+  background-color: #fff;
+  padding: 2.4rem 4.8rem;
+  border-radius: 11px;
+  color: var(--clr2-background);
+  box-shadow: 0 4px 12px 0 rgba(255, 255, 255, 0.219);
+}
+.instruction {
+  font-size: 2rem;
+}
+
+/* input */
+.input-box {
+  display: flex;
+  gap: 2.4rem;
+  width: 100%;
+}
+.text-input,
+.check-btn {
+  height: 4.4rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 11px;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+}
+
+.text-input {
+  width: 80%;
+  display: inline-block;
+  border: none;
+  background-color: var(--clr1-tint2);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.check-btn {
+  width: 10rem;
+  font-weight: bold;
+  background-color: var(--clr1-tint1);
+  color: #fff;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+}
+.check-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.check-btn:active {
+  transform: scale(0.95);
+}
+.output-descreption {
+  font-size: 2rem;
+}
