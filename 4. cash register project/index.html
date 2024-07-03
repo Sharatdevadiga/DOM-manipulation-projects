@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Cash register</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- title -->
+    <header>
+      <h1><i class="fa-solid fa-cash-register"></i> CASH REGISTER</h1>
+    </header>
+
+    <!-- main section -->
+    <main class="container">
+      <!-- price -->
+      <div class="small-container">
+        <h3>Enter the total price:</h3>
+        <div class="total-div">
+          <input type="Number" class="total input" />
+          <button class="total-btn">
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- cahs in -->
+      <div class="cash-In small-container">
+        <h3>Cash given by customer:</h3>
+        <input id="cash" type="number" class="input" value="" />
+      </div>
+
+      <!-- button -->
+      <div class="small-container">
+        <button id="purchase-btn">
+          <i class="fa-solid fa-coins"></i> Get change
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+
+      <!-- display output -->
+      <div class="output-div">
+        <h3 class="output-heading">Bill and Change-due</h3>
+        <div class="output-container">
+          <table id="change-due">
+            <tr>
+              <td><p>Total price :</p></td>
+              <td><span class="output-total-price"></span></td>
+            </tr>
+
+            <tr>
+              <td><p>Cash given :</p></td>
+              <td><span class="output-cash-given"></span></td>
+            </tr>
+            <tr>
+              <td><p>Change due :</p></td>
+              <td><span class="output-change-due"></span></td>
+            </tr>
+          </table>
+          <div class="change-due"></div>
+        </div>
+      </div>
+
+      <!-- Cash drawer -->
+
+      <div class="small-container output">
+        <div class="drawer-container">
+          <div class="cash-drawer-title">
+            <h3><i class="fa-solid fa-money-bill"></i> Cash drawer</h3>
+            <button class="refill-drawer-btn">
+              <i class="fa-solid fa-rotate"></i> Refill drawer
+            </button>
+          </div>
+          <div class="table"></div>
+        </div>
+
+        <div class="drawer-circle"></div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer"></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,253 @@
+/* GLOBAL RESET */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-clr: #14b8a6;
+  --main-tint1: #0891b2;
+  --main-tint2: #6ee7b7;
+  --main-tint3: #a7f3d0;
+  --main-shade: #0d9488;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+}
+
+/* ////////////////////////////////// */
+/* GENERAL STYLE */
+.container {
+  margin: 0 auto;
+  padding: 4.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.small-container {
+  margin: 0 auto;
+  display: flex;
+  gap: 2.4rem;
+}
+.input {
+  border-radius: 11px;
+  border: 2px solid var(--main-tint1);
+  padding: 0.4rem;
+  height: 2.2rem;
+}
+.output-div {
+  margin: 0 auto;
+  border: 2px solid var(--main-clr);
+  border-radius: 11px;
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 50rem;
+  margin-bottom: 3.6rem;
+}
+.output-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+
+  padding: 2.4rem;
+  border-radius: 11px;
+}
+.output-heading {
+  text-align: center;
+  background-color: var(--main-tint3);
+  padding: 0.4rem;
+  border-radius: 11px 11px 0 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+/* //////////////////////////////// */
+/* component style */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--main-clr);
+  border-top: 0.8rem solid var(--main-shade);
+}
+
+/* buttons */
+.total-btn {
+  border-radius: 0 11px 11px 0;
+  border: 2px solid var(--main-tint1);
+  padding: 0.4rem;
+  height: 2.2rem;
+  background-color: var(--main-clr);
+  transition: all 0.3s;
+}
+.total-btn:hover {
+  transform: scale(1.1);
+}
+#purchase-btn,
+.refill-drawer-btn {
+  max-width: 50rem;
+  width: 28rem;
+
+  height: 2.4rem;
+  margin-bottom: 3.6rem;
+  font-weight: bold;
+  border-radius: 11px;
+  border: none;
+  background-color: var(--main-clr);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+#purchase-btn:hover,
+.refill-drawer-btn:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+#purchase-btn:active,
+.refill-drawer-btn:active {
+  transform: scale(0.97);
+}
+.refill-drawer-btn {
+  width: auto;
+  padding: 0 1.2rem 0 1.2rem;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 4.8rem;
+  border-radius: 0 11px 0 0;
+}
+/* input elements */
+.total {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#change-due {
+  width: 250px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1.2rem;
+}
+.output {
+  border: 2px solid var(--main-clr);
+  width: 100%;
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 11px;
+  padding: 0.8rem;
+}
+
+.drawer-circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--main-shade);
+  border-radius: 50%;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+.footer {
+  position: fixed;
+  background-color: var(--main-shade);
+  height: 0.4rem;
+  width: 100%;
+  bottom: 0vh;
+}
+
+/* tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-radius: 11px;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 8px;
+  border: 1px solid var(--main-clr);
+  width: 50%;
+}
+.drawer-container {
+  width: 100%;
+  position: relative;
+}
+
+.cash-drawer-title {
+  display: flex;
+  gap: 2.4rem;
+  justify-content: center;
+  padding: 1.2rem;
+  background-color: #a7f3d0;
+  border-radius: 11px 11px 0 0;
+  border: 1px solid var(--main-clr);
+  border-bottom: none;
+  height: 4.8rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cash-table {
+  width: auto !important;
+}
+.change-due {
+  width: 100%;
+}
+
+/* /////////////////////////////// */
+/* media querries */
+@media (max-width: 600px) {
+  html {
+    font-size: 90%;
+  }
+  .container {
+    padding: 4.4rem 0.8rem 4.4rem 0.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .cash-drawer-title {
+    justify-content: start;
+  }
+}
+
+@media (max-width: 440px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 395px) {
+  .small-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  #purchase-btn {
+    width: 20rem;
+  }
+  .container {
+    gap: 3.6rem;
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  .refill-drawer-btn {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 280px) {
+  #purchase-btn {
+    width: 14rem;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  .refill-drawer-btn {
+    width: 65px;
+  }
+}
