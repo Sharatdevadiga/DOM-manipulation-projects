@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- head -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/1d7e7f393c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Telephone number validator</title>
+  </head>
+
+  <!-- body -->
+  <body>
+    <div class="background-box">
+      <!-- main container - mobile structure -->
+      <main class="container--main">
+        <!-- camera -->
+        <div class="camera">
+          <div class="outer-circle">
+            <div class="inner-circle"></div>
+          </div>
+        </div>
+
+        <!-- input section -->
+        <div class="input-div">
+          <i
+            class="fa-solid fa-phone fa-2x phone-icon"
+            style="color: #c9c9c95f"
+          ></i>
+          <input
+            type="text"
+            id="user-input"
+            placeholder=" Enter the number to validate"
+            maxlength="20"
+          />
+        </div>
+
+        <!-- output section -->
+        <div class="output">
+          <div class="heading-validations">
+            <i class="fa-solid fa-square-poll-vertical fa-2x"></i>
+            <h3>Previous Validations</h3>
+          </div>
+          <div id="results-div">
+            <div class="entry validnumber">
+              <i
+                class="fa-solid fa-circle-check"
+                style="color: #32e43581"
+                aria-hidden="true"
+              ></i>
+              <p class="para">Valid US number: 5555555555</p>
+            </div>
+            <div class="entry invalidNumber">
+              <i
+                class="fa-solid fa-circle-xmark"
+                style="color: #ff0d0d81"
+                aria-hidden="true"
+              ></i>
+              <p class="para">Invalid US number: 45654555</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="buttons-div">
+          <button class="btn" id="check-btn">
+            <i class="fa-solid fa-square-check"></i>
+            Validate
+          </button>
+          <button class="btn" id="clear-btn">
+            <i class="fa-solid fa-trash"></i>
+            Clear
+          </button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
